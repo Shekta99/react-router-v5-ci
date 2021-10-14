@@ -42,6 +42,9 @@ export default function App() {
             <Route path="/about/:section">
               <About />
             </Route>
+            <Route path="/about">
+              <About />
+            </Route>
             <Route path="/*">
               <Home />
             </Route>
