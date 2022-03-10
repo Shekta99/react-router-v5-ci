@@ -52,6 +52,9 @@ export default function App() {
             <ProtectedRoute path="/login">
               <div>login </div>
             </ProtectedRoute>
+            <Route exact path="/">
+              <p>Ruta base</p>
+            </Route>
             <Route path="/*">
               <h1>error 404 not found</h1>
             </Route>
