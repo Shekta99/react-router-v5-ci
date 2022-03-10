@@ -9,6 +9,7 @@ import {
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Email from "./components/Email";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 
 const Home = React.lazy(() => import("./components/Home"));
 
@@ -45,8 +46,14 @@ export default function App() {
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/*">
+            <Route path="/home">
               <Home />
+            </Route>
+            <ProtectedRoute path="/login">
+              <div>login </div>
+            </ProtectedRoute>
+            <Route path="/*">
+              <h1>error 404 not found</h1>
             </Route>
           </Switch>
         </Suspense>
